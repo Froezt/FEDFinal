@@ -77,14 +77,21 @@ html {
     text-align: left;
 }
 
-.kopje:nth-child(2):hover, .kopje:nth-child(4):hover, .kopje:nth-child(6):hover, .dropdown-content a:first-child:hover {
+.kopje:nth-child(2):hover,
+.kopje:nth-child(4):hover,
+.kopje:nth-child(6):hover,
+.dropdown-content a:first-child:hover {
     background-color: rgba(21, 139, 213, 1);
     color: white;
     padding: 28px 10px;
     font-weight: bold;
 }
 
-.kopje:first-child:hover, .kopje:nth-child(3):hover, .kopje:nth-child(5):hover, .dropdown-content a:nth-child(2):hover, .dropdown a:hover {
+.kopje:first-child:hover,
+.kopje:nth-child(3):hover,
+.kopje:nth-child(5):hover,
+.dropdown-content a:nth-child(2):hover,
+.dropdown a:hover {
     background-color: rgba(223, 148, 4, 1);
     color: white;
     padding: 28px 10px;
@@ -154,8 +161,8 @@ html {
         width: 100%;
         text-align: left;
     }
-    
-    
+
+
 
 }
 
@@ -167,13 +174,19 @@ a.icon {
 }
 
 .logo {
+    transition: 3s;
     position: absolute;
     top: 7px;
     left: 7px;
     height: 60px;
 }
 
-.naam {
+.logo:hover {
+    transition: 4s;
+    transform: rotate(3600deg);
+}
+
+h1 {
     position: absolute;
     margin-left: 4em;
     top: 0.4em;
@@ -187,7 +200,7 @@ a.icon {
     border-top: solid 2px rgba(21, 139, 213, 1);
 }
 
-.box {
+main {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -235,7 +248,7 @@ footer {
     article h2 {
         font-size: 22px;
     }
-    
+
     .naam {
         font-size: 20px;
         margin-left: 4em;
@@ -272,14 +285,16 @@ footer {
     margin-bottom: 10em;
 }
 
-.expertgrid div img, .secretariaatgrid div img {
+.expertgrid div img,
+.secretariaatgrid div img {
     margin-top: 3em;
-    margin-bottom: 0,5em;
+    margin-bottom: 0, 5em;
     margin-left: 3em;
     width: 9.5em;
 }
 
-.expertgrid div p, .secretariaatgrid div p {
+.expertgrid div p,
+.secretariaatgrid div p {
     margin-left: 3em;
     font-family: Arial;
 }
@@ -297,7 +312,7 @@ footer {
 
 .klachtenregelingsquare {
     width: 60vw;
-    height: 530px;
+    height: 800px;
     z-index: 5;
     background-color: rgba(255, 255, 255, 0.9);
     margin-top: 5vw;
@@ -308,7 +323,7 @@ footer {
 
 .bezoeksquare {
     width: 60vw;
-    height: 1350px;
+    height: 1500px;
     z-index: 5;
     background-color: rgba(255, 255, 255, 0.9);
     margin-top: 5vw;
@@ -330,12 +345,13 @@ label {
         grid-template-rows: 16em 16em 16em 16em 16em 16em;
         height: 2350px;
     }
+
     .klachtenregelingsquare {
         height: 800px
     }
-    
+
     .bezoeksquare {
-        height: 1300px;
+        height: 1650px;
     }
 }
 
@@ -345,13 +361,15 @@ label {
         grid-template-rows: 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em;
         height: 4600px;
     }
+
     .klachtenregelingsquare {
         height: 950px;
     }
+
     .bezoeksquare {
         height: 2000px;
     }
-    
+
     .secretariaatgrid {
         grid-template-columns: 18em;
         grid-template-rows: 16em 16em;
@@ -365,35 +383,39 @@ label {
         grid-template-rows: 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em;
         width: 70vw;
     }
+
     .expertgrid div img {
         margin-left: 3em;
     }
-    
+
     .bezoeksquare {
-        height: 2470px;
+        height: 2600px;
+    }
+
+    .klachtenregelingsquare {
+        height: 1150px;
     }
 }
 
-form {
-    margin-left: 5vw;
-    margin-top: 1em;
-    margin-right: 5em;
-}
+
 
 input {
     border-radius: 5px;
-    border: solid grey 1px;
+    border: solid grey 2px;
     margin-bottom: 0.5em;
     font-family: Helvetica;
 }
 
+input:valid {
+    border: solid lightgreen 2px;
+}
+
 fieldset {
     border-radius: 25px;
-    border: solid rgba(223, 148, 4, 1) 3px;
-    padding-top: 1.5em;
-    padding-left: 2vw;
-    padding-bottom: 0.5em;
-    padding-right: 0.5em;
+    border: none;
+    margin-left: 5em;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
 }
 
 legend {
@@ -409,12 +431,17 @@ legend {
 
 textarea {
     resize: none;
-    border: solid grey 1px;
+    border: solid grey 2px;
     border-radius: 5px;
     width: 40vw;
 }
 
+textarea:valid {
+    border: solid lightgreen 2px;
+}
+
 #stuurknop {
+    transition: 0.5s;
     background-color: #095fd9;
     color: white;
     height: 3em;
@@ -429,7 +456,6 @@ textarea {
 #stuurknop:hover {
     background-color: rgba(21, 139, 213, 1);
     cursor: pointer;
-    margin-left: 300px;
 }
 
 @media (max-width: 650px) {
@@ -438,7 +464,41 @@ textarea {
     }
 }
 
-span {
+h3 {
     font-weight: bold;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    font-family: Helvetica;
+    color: #575757;
+    font-size: 1em;
 }
 
+#check {
+    width: 30px;
+    height: auto;
+    margin-left: 15px;
+    display: none;
+}
+
+.laser1 {
+    width: 2000px;
+    height: 30px;
+    z-index: 7;
+    background: linear-gradient(to bottom, #9e1f1f 1%,#ff0000 48%,#930000 100%);
+    margin-top: 5vw;
+    top: 10%;
+    position: absolute;
+    transform: rotate(20deg);
+}
+
+.laser2 {
+    width: 2000px;
+    height: 30px;
+    z-index: 7;
+    background: linear-gradient(to bottom, #9e1f1f 1%,#ff0000 48%,#930000 100%);
+    margin-top: 5vw;
+    top: 10%;
+    position: absolute;
+    transform: rotate(-40deg);
+    left: 0%;
+}

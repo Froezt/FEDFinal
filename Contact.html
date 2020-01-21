@@ -14,7 +14,7 @@
 <body>
     <header>
         <img class="logo" src="images/logo.png" alt="Logo">
-        <h1 class="naam">Schaderegelingsburo <br> R.P. van Dijk</h1>
+        <h1>Schaderegelingsburo <br> R.P. van Dijk</h1>
         <nav class="topnav" id="myTopnav">
             <a class="kopje" href="Index.html">Home</a>
             <a class="kopje" href="Diensten.html">Diensten</a>
@@ -33,31 +33,32 @@
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
     </header>
-    
-    <div class="box">
-        <div class="square">
-            <!--Aanmaken van een form -->
-            <form>
-                <fieldset>
-                    <legend>Contact</legend>
-                    <label for="heer">Aanhef</label>
-                    <label for="heer" style="display: inline-block;"><input type="radio" name="gender" id="heer" />De heer</label>
-                    <label for="vrouw" style="display: inline-block;"><input type="radio" name="gender" id="vrouw" />Mevrouw</label>
-                    <label for="naam">Naam:</label>
-                    <input type="text" id="naam" placeholder="Uw naam.." class="textfield">
-                    <label for="mail">Email:</label>
-                    <input type="email" id="mail" placeholder="Uw email.." class="textfield">
-                    <label for="nummer">Telefoonnummer:</label>
-                    <input id="nummer" type="text" class="textfield" placeholder="Uw telefoonnummer..">
-                    <label for="bericht">Bericht:</label>
-                    <textarea rows="6" cols="80" id="bericht"> </textarea><br><br>
-                    <input type="submit" id="stuurknop">
-                </fieldset>
-            </form>
-        </div>
-    </div>
 
-<script src="java/java.js"></script>
+    <main>
+        <!--Aanmaken van een form -->
+        <form class="square">
+            <fieldset>
+                <legend>Contact</legend>
+                <label for="heer">Aanhef</label>
+                <label for="heer" style="display: inline-block;"><input type="radio" name="gender" id="heer" />De heer</label>
+                <label for="vrouw" style="display: inline-block;"><input type="radio" name="gender" id="vrouw" />Mevrouw</label>
+                <label for="naam">Naam:</label>
+                <input type="text" id="naam" placeholder="Uw naam.." class="textfield" required pattern=".*\S.*">
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" placeholder="Uw email.." class="textfield" required pattern=".*\S.*">
+                <label for="nummer">Telefoonnummer:</label>
+                <input id="nummer" type="text" class="textfield" placeholder="Uw telefoonnummer.." required pattern=".*\S.*">
+                <label for="bericht">Bericht:</label>
+                <textarea rows="6" cols="80" id="bericht" required pattern=".*\S.*"></textarea><br><br>
+                <input type="submit" id="stuurknop">
+                <img id="check" src="images/check.png" alt="Checkmark">
+            </fieldset>
+        </form>
+    </main>
+    <div id="laser1"></div>
+    <div id="laser2"></div>
+    <audio id="audio" src="sound/laser.mp3"></audio>
+    <script src="java/java.js"></script>
 
 </body>
 
